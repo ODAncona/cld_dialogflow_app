@@ -6,7 +6,11 @@ Présentation de groupe sur le service cloud google dialogflow
 
 Comme preuve de concept, nous allons faire la démonstration d'une petite application permettant de connaitre des informations sur le chillout.
 
-### Fonctionnalités
+### Intents
 
 - Horaire du chill
-- Assister une commande de bière
+- Commander une bière
+- Events du chill
+- Jeux dispos ?
+- Avoir le prix d'une bière
+- Choper une carte chill
