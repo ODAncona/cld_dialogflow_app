@@ -1,0 +1,55 @@
+type,nom,prix,quantite
+biere,deetz,2,33
+biere,tak,2,33
+biere,kramah,2,33
+biere,helles,3,50
+biere,speakeasy,3,33
+biere,placebo,2,33
+biere,roestigraben,4,33
+biere,delorean,3,33
+cidre,sommersby,3,33
+biere,l'ambree,3,33
+biere,la bricote,3,33
+biere,la blanche,3,33
+biere,la motueka,3,33
+biere,la blonde,3,33
+biere,floreal,3,33
+biere,porn star,3,33
+biere,l'intrepide,3,33
+biere,triple carmelite,3,33
+biere,la forteresse,3,33
+biere,tchaff,3,33
+biere,jolly poupee,3,33
+biere,ginger,3,33
+biere,delirium,3,33
+biere,kriek,3,33
+biere,streling,3,33
+biere,moonshine,3,33
+biere,salamandre,3,33
+biere,pillows,2,33
+biere,fwt,2,33
+biere,o'hara's red,2,33
+biere,wittekop,2,33
+biere,pecheresse,2,33
+biere,dead pony club,2,33
+biere,cuvee des trolls,2,33
+biere,chopfab,2,50
+biere,guiness,2,33
+biere,biere des amis,2,33
+biere,leffe,2,33
+biere,corbeau,3,33
+biere,punk ipa,3,50
+biere,indie,3,50
+biere,swaf,1,33
+biere,farmer blanche,1,50
+biere,farmer blonde,1,50
+soft,fizzy citron,1,35
+soft,mate,2,35
+soft,club mate,2,50
+soft,fizzy pamplemousse,2,35
+soft,fizzy raisins,2,35
+soft,fizzy myrtilles,2,35
+soft,the froid citron,1,33
+soft,the froid peche,1,33
+soft,coca,1,33
+soft,coca zero,1,33
