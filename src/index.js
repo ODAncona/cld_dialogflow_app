@@ -5,10 +5,10 @@ import {
 import express from 'express';
 
 // Configuration
-const CSV_PATH = "../data/boissons.csv";
+const CSV_PATH = "./data/boissons.csv";
 let data = [];
 const parser = parse({
-  delimiter: ':'
+  delimiter: ","
 }, (err, data) => {
   console.log(data);
 });
@@ -38,5 +38,6 @@ app.get('/infos', (req, res) => {
 // Execution
 console.log("API started...");
 app.listen(3000);
+
 const mdr = await getData(CSV_PATH);
 console.log(mdr)
