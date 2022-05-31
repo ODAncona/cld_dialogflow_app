@@ -1,0 +1,23 @@
+{
+  "name": "cld_dialogflow_app",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Il s'agit d'une application",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ODAncona/cld_dialogflow_app.git"
+  },
+  "author": "Olivier D'Ancona, Hugo Huart, Vincent Peer, Nicolas Wichoud",
+  "license": "GPL-2.0-only",
+  "bugs": {
+    "url": "https://github.com/ODAncona/cld_dialogflow_app/issues"
+  },
+  "homepage": "https://github.com/ODAncona/cld_dialogflow_app#readme",
+  "dependencies": {
+    "csv-parse": "^5.1.0"
+  }
+}
