@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ODAncona/cld_dialogflow_app#readme",
   "dependencies": {
-    "csv-parse": "^5.1.0"
+    "csv-parse": "^5.1.0",
+    "express": "^4.18.1"
   }
 }
