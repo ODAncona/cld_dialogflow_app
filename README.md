@@ -10,10 +10,9 @@ Comme preuve de concept, nous allons faire la démonstration d'une petite applic
 
 - Horaire du chill
 - Commander une bière
-- Events du chill
-- Jeux dispos ?
-- Avoir le prix d'une bière
+- Avoir info d'une bière
 - Choper une carte chill
+- Description (chill, bar, jeux)
 
 
 ## Ressources
