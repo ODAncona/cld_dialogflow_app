@@ -7,14 +7,15 @@ import express from 'express';
 // Configuration
 const CSV_PATH = "./data/boissons.csv";
 let data = [];
-const parser = parse({
-  delimiter: ","
-}, (err, data) => {
-  console.log(data);
-});
+
 
 // Parsing function
 const getData = async (filepath) => {
+  const parser = parse({
+    delimiter: ","
+  }, (err, data) => {
+    console.log(data);
+  });
   fs.createReadStream(CSV_PATH).pipe(parser);
 }
 
@@ -35,9 +36,9 @@ app.get('/infos', (req, res) => {
   res.send(true);
 })
 
-// Execution
-console.log("API started...");
-app.listen(3000);
-
 const mdr = await getData(CSV_PATH);
 console.log(mdr)
+
+// Execution
+console.log("Server running on port 3000");
+app.listen(3000);
