@@ -56,10 +56,11 @@ app.get("/infos/:beerName", (req, res) => {
 });
 
 // Express get price
-app.post("/price/:beerName", (req, res) => {
-  const beerPrice = getBeer(req.params.beerName).prix;
-  const beerText =
-    "la bière " + req.params.beerName + " coûte " + beerPrice + ".";
+app.post("/infos/", (req, res) => {
+  console.log(req);
+  const beer = req.body.queryResult.parameters.boisson;
+  const beerPrice = getBeer(beer).prix;
+  const beerText = "La boisson " + req.params.beerName + " coûte " + beerPrice + ".";
   const response = {
     fulfillmentMessages: [
       {
@@ -71,7 +72,7 @@ app.post("/price/:beerName", (req, res) => {
   };
   res.send(JSON.stringify(response));
 });
-
+/*
 // Express get infos
 app.post("/infos/:beerName", (req, res) => {
   const beerInfos = getBeer(req.params.beerName);
@@ -86,3 +87,4 @@ app.post("/infos/:beerName", (req, res) => {
   };
   res.send(JSON.stringify(response));
 });
+*/
