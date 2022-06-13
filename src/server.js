@@ -53,9 +53,9 @@ app.post("/infos/", (req, res) => {
   console.log(req.body);
   console.log("STOP");
 
-  const beer = "swaf";
+  const beer = req.parameters.boisson;
   const beerPrice = getBeer(beer).prix;
-  const beerText = "La boisson " + req.params.beerName + " coûte " + beerPrice + ".";
+  const beerText = "La boisson " + beer + " coûte " + beerPrice + ".";
   const response = {
     fulfillmentMessages: [
       {
