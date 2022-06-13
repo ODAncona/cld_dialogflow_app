@@ -34,7 +34,9 @@ const app = express();
 
 // Execution
 console.log("API started...");
+
 app.listen(process.env.PORT || 3000);
+app.use(express.json);
 
 data = await getData(CSV_PATH);
 
@@ -57,9 +59,7 @@ app.get("/infos/:beerName", (req, res) => {
 
 // Express get price
 app.post("/infos/", (req, res) => {
-  console.log("START")
-  console.log(req);
-  console.log("STOP")
+  console.log(req.body);
 
   const beer = "swaf";
   const beerPrice = getBeer(beer).prix;
