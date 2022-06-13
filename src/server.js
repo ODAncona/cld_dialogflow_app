@@ -26,7 +26,7 @@ const getData = async filepath => {
 // Getter
 const getBeer = name => {
   let n = data.find(e => e.nom == name.toLowerCase());
-  return n ? n : "Bière inexistante";
+  return n ? n : null;
 };
 
 //--------------------- Web Server -----------------------
@@ -49,14 +49,15 @@ app.get("/", (req, res) => {
 
 // Express get price
 app.post("/infos/", (req, res) => {
-  console.log("START");
-  console.log(typeof req.body);
-  console.log(req.body.queryResult.parameters);
-  console.log("STOP");
-
-  const beer = req.body.queryResult.parameters.boisson;
+  const beer = req.body.queryResult.parameters.boisson ? req.body.queryResult.parameters.boisson : null;
+  
+  let beerText = "";
   const beerPrice = getBeer(beer).prix;
-  const beerText = "La boisson " + beer + " coûte " + beerPrice + ".";
+  if (beer == null || beerPrice == null) {
+    beerText = "Cette bière n'existe pas ou n'est pas disponible.";
+  } else {
+    beerText = "La boisson " + beer + " coûte " + beerPrice + ".";
+  }
   const response = {
     fulfillmentMessages: [
       {
