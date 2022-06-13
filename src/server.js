@@ -50,6 +50,7 @@ app.get("/", (req, res) => {
 // Express get price
 app.post("/infos/", (req, res) => {
   console.log("START");
+  console.log(typeof req.body);
   console.log(req.body);
   console.log("STOP");
 
