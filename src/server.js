@@ -54,7 +54,7 @@ app.post("/infos/", (req, res) => {
   console.log(req.body.queryResult.parameters);
   console.log("STOP");
 
-  const beer = req.parameters.boisson;
+  const beer = req.queryResult.parameters.boisson;
   const beerPrice = getBeer(beer).prix;
   const beerText = "La boisson " + beer + " coûte " + beerPrice + ".";
   const response = {
