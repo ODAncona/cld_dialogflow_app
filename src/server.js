@@ -51,7 +51,7 @@ app.get("/", (req, res) => {
 app.post("/infos/", (req, res) => {
   console.log("START");
   console.log(typeof req.body);
-  console.log(req.body.parameters);
+  console.log(req.body.queryResult.parameters);
   console.log("STOP");
 
   const beer = req.parameters.boisson;
