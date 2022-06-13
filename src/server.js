@@ -64,7 +64,7 @@ app.post("/price/:beerName", (req, res) => {
     fulfillmentMessages: [
       {
         text: {
-          text: beerText
+          text: [beerText]
         }
       }
     ]
