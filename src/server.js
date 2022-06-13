@@ -57,7 +57,7 @@ app.post("/infos/", (req, res) => {
   if (beer == null) {
     beerText = "Cette bière n'existe pas ou n'est pas disponible.";
   } else {
-    beerText = "La boisson " + beer.nom + " coûte " + beer.price + ".";
+    beerText = "La boisson " + beer.nom + " coûte " + beer.prix + ".";
   }
   const response = {
     fulfillmentMessages: [
