@@ -1,6 +1,6 @@
-import * as fs from "fs";
 import {parse} from "csv-parse";
 import express from "express";
+import * as fs from "fs";
 
 // Configuration
 const CSV_PATH = "./data/boissons.csv";
@@ -36,7 +36,9 @@ const app = express();
 console.log("API started...");
 
 app.listen(process.env.PORT || 3000);
-//app.use(express.json);
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 data = await getData(CSV_PATH);
 
@@ -47,7 +49,9 @@ app.get("/", (req, res) => {
 
 // Express get price
 app.post("/infos/", (req, res) => {
+  console.log("START");
   console.log(req.body);
+  console.log("STOP");
 
   const beer = "swaf";
   const beerPrice = getBeer(beer).prix;
