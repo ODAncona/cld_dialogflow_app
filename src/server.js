@@ -34,7 +34,7 @@ const app = express();
 
 // Execution
 console.log("API started...");
-app.listen(80);
+app.listen(process.env.PORT || 3000);
 
 data = await getData(CSV_PATH);
 
