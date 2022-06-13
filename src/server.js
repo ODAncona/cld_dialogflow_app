@@ -57,7 +57,10 @@ app.get("/infos/:beerName", (req, res) => {
 
 // Express get price
 app.post("/infos/", (req, res) => {
-  console.log(req);
+  console.log(req.body);
+  console.log("===PARAMS===")
+  console.log(req.params);
+  
   const beer = "swaf";
   const beerPrice = getBeer(beer).prix;
   const beerText = "La boisson " + req.params.beerName + " coûte " + beerPrice + ".";
