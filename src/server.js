@@ -49,14 +49,15 @@ app.get("/", (req, res) => {
 
 // Express get price
 app.post("/infos/", (req, res) => {
-  const beer = req.body.queryResult.parameters.boisson ? req.body.queryResult.parameters.boisson : null;
+
+  const beerName = req.body.queryResult.parameters.boisson ? req.body.queryResult.parameters.boisson : null;
   
   let beerText = "";
-  const beerPrice = getBeer(beer).prix;
-  if (beer == null || beerPrice == null) {
+  const beer = getBeer(beerName);
+  if (beer == null) {
     beerText = "Cette bière n'existe pas ou n'est pas disponible.";
   } else {
-    beerText = "La boisson " + beer + " coûte " + beerPrice + ".";
+    beerText = "La boisson " + beer.nom + " coûte " + beer.price + ".";
   }
   const response = {
     fulfillmentMessages: [
