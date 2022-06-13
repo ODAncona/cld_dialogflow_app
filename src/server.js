@@ -36,25 +36,13 @@ const app = express();
 console.log("API started...");
 
 app.listen(process.env.PORT || 3000);
-app.use(express.json);
+//app.use(express.json);
 
 data = await getData(CSV_PATH);
 
 // Express BASIC
 app.get("/", (req, res) => {
   res.send("Welcome to Chill API");
-});
-
-// Express get price
-app.get("/price/:beerName", (req, res) => {
-  let beer = getBeer(req.params.beerName).prix;
-  res.send(JSON.stringify(beer));
-});
-
-// Express get infos
-app.get("/infos/:beerName", (req, res) => {
-  let beerName = getBeer(req.params.beerName);
-  res.send(JSON.stringify(beerName));
 });
 
 // Express get price
